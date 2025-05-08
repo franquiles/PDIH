@@ -10,7 +10,7 @@ void setup() {
   pinMode(echoPin, INPUT);   // ECHO como entrada
   pinMode(buzzer, OUTPUT);   // Buzzer como salida
 
-  Serial.begin(9600);       9
+  Serial.begin(9600);       
 }
 
 void loop() {
