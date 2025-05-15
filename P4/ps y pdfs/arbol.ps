@@ -1,0 +1,117 @@
+%!PS-Adobe-3.0
+%%Title: Árboles con copas ovaladas
+%%Creator: Fran Quiles
+%%Pages: 1
+%%BoundingBox: 0 0 612 792
+%%EndComments
+
+/arbol-grande {
+    % Árbol grande con tronco alto y copas ovaladas
+    gsave
+        translate
+
+        % Tronco grande
+        newpath
+        -20 0 moveto
+        40 0 rlineto
+        0 130 rlineto
+        -40 0 rlineto
+        closepath
+        0.55 0.27 0.07 setrgbcolor
+        fill
+
+        % Copas ovaladas
+        0 0.6 0 setrgbcolor  % verde
+        gsave
+            0 180 translate
+            1 1.8 scale
+            newpath
+            0 0 35 0 360 arc
+            fill
+        grestore
+
+        gsave
+            -25 230 translate
+            1 1.8 scale
+            newpath
+            0 0 40 0 360 arc
+            fill
+        grestore
+
+        gsave
+            25 210 translate
+            1 1.8 scale
+            newpath
+            0 0 40 0 360 arc
+            fill
+        grestore
+    grestore
+} def
+
+/arbol-pequeno {
+    % Árbol pequeño con tronco y copas ovaladas más pequeñas
+    gsave
+        translate
+
+        % Tronco
+        newpath
+        -15 0 moveto
+        15 0 rlineto
+        0 100 rlineto
+        -15 0 rlineto
+        closepath
+        0.55 0.27 0.07 setrgbcolor
+        fill
+
+        % Copas ovaladas
+        0 0.6 0 setrgbcolor  % verde
+        gsave
+            20 110 translate
+            1 1.2 scale
+            newpath
+            0 0 35 0 360 arc
+            fill
+        grestore
+
+        gsave
+            -25 130 translate
+            1 1.2 scale
+            newpath
+            0 0 35 0 360 arc
+            fill
+        grestore
+
+        gsave
+            15 150 translate
+            1 1.2 scale
+            newpath
+            0 0 35 0 360 arc
+            fill
+        grestore
+    grestore
+} def
+
+/bola {
+    % Bola verde claro con borde rojo
+    gsave
+        translate
+        newpath
+        0 0 15 0 360 arc
+        0.7 1 0.6 setrgbcolor   % verde claro
+        fill
+
+        newpath
+        0 0 15 0 360 arc
+        1 0 0 setrgbcolor       % borde rojo
+        1 setlinewidth
+        stroke
+    grestore
+} def
+
+% Dibujo final
+150 100 arbol-grande
+400 100 arbol-pequeno
+270 115 bola
+
+showpage
+%%EOF

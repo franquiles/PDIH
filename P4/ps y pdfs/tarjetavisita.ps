@@ -1,0 +1,69 @@
+%!PS-Adobe-3.0
+%%Title: Tarjeta de visita
+%%Creator: Práctica PostScript
+%%Pages: 1
+%%BoundingBox: 0 0 842 595
+%%EndComments
+
+<< /PageSize [842 595] >> setpagedevice  % Página apaisada
+
+% Fondo gris claro (rectángulo de fondo) 
+newpath
+50 50 moveto
+742 0 rlineto
+0 505 rlineto
+-742 0 rlineto
+closepath
+0.95 setgray
+fill
+
+% Círculo gris claro con borde negro
+newpath
+240 300 85 0 360 arc
+0.8 setgray
+fill
+
+newpath
+240 300 85 0 360 arc
+0 setgray
+2 setlinewidth
+stroke
+
+% Texto
+
+/Times-Roman findfont
+24 scalefont
+setfont
+newpath
+599 300 moveto
+(Fran Quiles) show
+
+/Times-Roman findfont
+18 scalefont
+setfont
+newpath
+558 280 moveto
+(Estudiante de la UGR) show
+
+/Times-Roman findfont
+16 scalefont
+setfont
+
+newpath
+555 250 moveto
+(Pº de la Castellana, 141) show
+newpath
+543 235 moveto
+(Local 2 - Edificio Cuzco IV) show
+newpath
+618 220 moveto
+(28046 Granada) show
+newpath
+500 200 moveto
+(Tels. 914 174 550 / 669 896 224) show
+newpath
+575 185 moveto
+(franquiles590@ugr.es) show
+
+showpage
+%%EOF

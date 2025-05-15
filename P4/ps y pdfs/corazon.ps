@@ -1,0 +1,63 @@
+%!PS-Adobe-3.0
+%%Title: Corazón con poesía personalizada
+%%Creator: Práctica PostScript
+%%Pages: 1
+%%BoundingBox: 0 0 1042 555
+%%EndComments
+
+<< /PageSize [1062 555] >> setpagedevice  % Página apaisada
+
+% --- Corazón grande (círculos + triángulo) ---
+
+% Círculo izquierdo
+newpath
+220 400 100 0 360 arc
+1 0 0 setrgbcolor  % rojo
+fill
+
+% Círculo derecho
+newpath
+420 400 100 0 360 arc
+1 0 0 setrgbcolor
+fill
+
+% Triángulo inferior
+newpath
+118 400 moveto
+320 120 lineto
+522 400 lineto
+closepath
+1 0 0 setrgbcolor
+fill
+
+% --- Texto: nueva poesía con degradado de grises ---
+
+/Helvetica-Bold findfont
+22 scalefont
+setfont
+
+0.6 setgray
+newpath
+580 250 moveto
+(Lo que brilla se apaga, todo cambia.) show
+
+0.4 setgray
+newpath
+580 220 moveto
+(No siempre lo hermoso es lo que dura.) show
+
+0.2 setgray
+newpath
+580 190 moveto
+(Quien te quiere mas alla de un reflejo,) show
+
+0 setgray
+/Helvetica-Bold findfont
+22 scalefont
+setfont
+newpath
+580 160 moveto
+(te quiere de verdad, sin envoltura.) show
+
+showpage
+%%EOF

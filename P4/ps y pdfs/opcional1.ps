@@ -1,0 +1,63 @@
+%!PS-Adobe-3.0
+%%Title: Círculos con sonrisa bitmap
+%%Creator: Fran Quiles
+%%Pages: 1
+%%BoundingBox: 0 0 842 595
+%%EndComments
+
+<< /PageSize [842 595] >> setpagedevice
+
+/xc 421 def
+/yc 297 def
+
+% Círculos concéntricos
+newpath
+xc yc 100 0 360 arc
+0 0 1 setrgbcolor     
+fill
+
+newpath
+xc yc 80 0 360 arc
+1 0 0 setrgbcolor     
+fill
+
+newpath
+xc yc 60 0 360 arc
+0 1 0 setrgbcolor     
+fill
+
+newpath
+xc yc 40 0 360 arc
+1 0 1 setrgbcolor     
+fill
+
+newpath
+xc yc 30 0 360 arc
+1 1 0 setrgbcolor     
+fill
+
+% --- Imagen: carita bitmap centrada ---
+
+gsave
+xc  yc translate     % Centrar en (421, 297)
+-18 -18 translate    
+35 35 scale           
+
+12 10 8 [12 0 0 -10 0 10]    % matrix (invierte Y y ajusta tamaño)
+{<
+ffffffffffffffffffffffff
+ffaaaaaaaaaaaaaaaaaaaaff
+ffaaaaaaaaaaaaaaaaaaaaff
+ffaaaa0000aaaa0000aaaaff
+ffaaaaaaaaaaaaaaaaaaaaff
+ffaaaaaaaaaaaaaaaaaaaaff
+ffaaaa00aaaaaaaa00aaaaff
+ffaaaaaa00000000aaaaaaff
+ffaaaaaaaaaaaaaaaaaaaaff
+ffffffffffffffffffffffff
+>}
+image
+grestore
+
+showpage
+%%EOF

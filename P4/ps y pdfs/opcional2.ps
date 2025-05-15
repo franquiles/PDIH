@@ -1,0 +1,103 @@
+%!PS-Adobe-3.0
+%%Title: Tabla y gráfica
+%%Pages: 2
+%%BoundingBox: 0 0 610 790
+%%EndComments
+
+<< /PageSize [610 790] >> setpagedevice
+
+% Página 1: TABLA 
+/Times-Roman findfont 14 scalefont setfont
+100 740 moveto
+(Mi tabla de datos) show
+
+% Tabla: esquina superior izquierda (x=100, y=700), celdas de 180x40
+
+/newcell {
+  % x y w h
+  newpath
+  4 dict begin
+    /h exch def
+    /w exch def
+    /y exch def
+    /x exch def
+    x y moveto
+    w 0 rlineto
+    0 h neg rlineto
+    w neg 0 rlineto
+    closepath
+    stroke
+  end
+} def
+
+% Dibujar celdas
+100 700 180 40 newcell
+280 700 180 40 newcell
+100 660 180 40 newcell
+280 660 180 40 newcell
+
+% Texto en celdas
+/Times-Roman findfont 12 scalefont setfont
+105 680 moveto (Columna-1) show
+285 680 moveto (Columna-2) show
+105 640 moveto (42) show
+285 640 moveto (21) show
+
+showpage
+
+% Página 2: GRÁFICA 
+<< /PageSize [610 790] >> setpagedevice
+
+/Times-Roman findfont 14 scalefont setfont
+60 740 moveto
+(La imagen) show
+
+% Dibujar ejes
+newpath
+100 500 moveto
+100 650 lineto
+stroke
+
+newpath
+100 500 moveto
+350 500 lineto
+stroke
+
+% Dibujar gráfica (líneas rojas)
+/red {1 0 0 setrgbcolor} def
+red
+2 setlinewidth
+
+newpath
+120 540 moveto
+160 520 lineto
+200 580 lineto
+240 530 lineto
+280 590 lineto
+stroke
+
+% Dibujar puntos en la gráfica
+/point {
+    newpath
+    red
+    0 0 3 0 360 arc
+    fill
+} def
+
+120 540 translate 0 0 point
+-120 -540 translate
+
+160 520 translate 0 0 point
+-160 -520 translate
+
+200 580 translate 0 0 point
+-200 -580 translate
+
+240 530 translate 0 0 point
+-240 -530 translate
+
+280 590 translate 0 0 point
+-280 -590 translate
+
+showpage
+%%EOF
